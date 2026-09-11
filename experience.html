@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Doe | Experience</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">John Doe</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</button>
+</nav>
+
+<main class="container">
+  <h1 class="page-title">Work Experience</h1>
+
+  <div class="stack-list">
+    <div class="card list-card">
+      <div class="left">
+        <div class="logo-badge"><i class="fa-brands fa-microsoft"></i></div>
+        <div class="body">
+          <div class="entry-title">Senior Software Engineer</div>
+          <div class="entry-sub">Microsoft</div>
+          <div class="entry-meta">Feb 2022 – Present · Full-time · Dubai, UAE (Hybrid)</div>
+          <p class="desc">Leading the development of cloud-based enterprise solutions for global customers across finance, retail and healthcare. Working closely with product managers, designers and cross-functional engineering teams to design, build and deploy scalable, secure and highly available applications on Azure, while driving best practices in system architecture and code quality.</p>
+          <div class="expand-details">
+            <ul class="check-list">
+              <li><i class="fa-solid fa-check icon"></i> Architected a multi-tenant SaaS platform serving 50k+ daily active users.</li>
+              <li><i class="fa-solid fa-check icon"></i> Reduced infrastructure costs by 30% through Kubernetes autoscaling.</li>
+              <li><i class="fa-solid fa-check icon"></i> Mentored a team of 5 engineers and led sprint planning.</li>
+              <li><i class="fa-solid fa-check icon"></i> Introduced infrastructure-as-code with Terraform, cutting environment setup time from days to hours.</li>
+              <li><i class="fa-solid fa-check icon"></i> Led migration of legacy monolith to a microservices architecture with zero downtime.</li>
+              <li><i class="fa-solid fa-check icon"></i> Established code review and CI standards adopted across three engineering teams.</li>
+            </ul>
+          </div>
+          <button class="see-more-btn" onclick="toggleDetails(this)">See more &gt;&gt;</button>
+        </div>
+      </div>
+      <div>
+        <div class="skills-gained-label">Skills Gained</div>
+        <div class="tag-group">
+          <span class="tag">Azure</span>
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card list-card">
+      <div class="left">
+        <div class="logo-badge"><i class="fa-brands fa-amazon"></i></div>
+        <div class="body">
+          <div class="entry-title">Software Engineer</div>
+          <div class="entry-sub">Amazon</div>
+          <div class="entry-meta">Jun 2019 – Jan 2022 · Full-time · Bangalore, India</div>
+          <p class="desc">Developed and maintained RESTful APIs and microservices used by millions of users worldwide. Owned the full software lifecycle from design and implementation to testing and deployment, and partnered with SRE teams to implement CI/CD pipelines that improved release velocity and overall system reliability.</p>
+          <div class="expand-details">
+            <ul class="check-list">
+              <li><i class="fa-solid fa-check icon"></i> Built a payment processing microservice handling 1M+ transactions/day.</li>
+              <li><i class="fa-solid fa-check icon"></i> Cut deployment time by 40% by automating the CI/CD pipeline with Jenkins.</li>
+              <li><i class="fa-solid fa-check icon"></i> Optimized MySQL queries, improving API response times by 25%.</li>
+              <li><i class="fa-solid fa-check icon"></i> Implemented distributed caching with Redis, reducing database load by 35%.</li>
+              <li><i class="fa-solid fa-check icon"></i> Participated in on-call rotation, resolving critical incidents within SLA.</li>
+              <li><i class="fa-solid fa-check icon"></i> Wrote unit and integration tests that raised code coverage from 60% to 90%.</li>
+            </ul>
+          </div>
+          <button class="see-more-btn" onclick="toggleDetails(this)">See more &gt;&gt;</button>
+        </div>
+      </div>
+      <div>
+        <div class="skills-gained-label">Skills Gained</div>
+        <div class="tag-group">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">AWS</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Jenkins</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card list-card">
+      <div class="left">
+        <div class="logo-badge"><i class="fa-solid fa-diagram-project"></i></div>
+        <div class="body">
+          <div class="entry-title">Systems Engineer</div>
+          <div class="entry-sub">Infosys</div>
+          <div class="entry-meta">Jul 2017 – May 2019 · Full-time · Pune, India</div>
+          <p class="desc">Worked on enterprise web applications and supported client-facing teams throughout the software development lifecycle, from gathering requirements to development, testing and production support, gaining a strong foundation in enterprise software practices and client communication.</p>
+          <div class="expand-details">
+            <ul class="check-list">
+              <li><i class="fa-solid fa-check icon"></i> Supported enterprise clients across banking and retail sectors.</li>
+              <li><i class="fa-solid fa-check icon"></i> Fixed production bugs and improved test coverage to 80%.</li>
+              <li><i class="fa-solid fa-check icon"></i> Collaborated with QA to streamline the release process.</li>
+              <li><i class="fa-solid fa-check icon"></i> Developed internal tools that automated manual reporting tasks, saving 10+ hours/week.</li>
+              <li><i class="fa-solid fa-check icon"></i> Documented system workflows, improving onboarding time for new hires.</li>
+              <li><i class="fa-solid fa-check icon"></i> Received "Rising Star" award for contributions in the first year.</li>
+            </ul>
+          </div>
+          <button class="see-more-btn" onclick="toggleDetails(this)">See more &gt;&gt;</button>
+        </div>
+      </div>
+      <div>
+        <div class="skills-gained-label">Skills Gained</div>
+        <div class="tag-group">
+          <span class="tag">Java</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  function toggleDetails(btn) {
+    const details = btn.previousElementSibling;
+    const expanded = details.classList.toggle('show');
+    btn.innerHTML = expanded ? 'See less &lt;&lt;' : 'See more &gt;&gt;';
+  }
+</script>
+</body>
+</html>
