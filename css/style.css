@@ -1,0 +1,634 @@
+/* ==========================================================================
+   Global / Reset
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px 32px;
+  border-bottom: 1px solid #e5e9f2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  color: #475569;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.nav-links a.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* ==========================================================================
+   Page Heading
+   ========================================================================== */
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   About Me / Home shared layout
+   ========================================================================== */
+.profile-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  position: relative;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.profile-info h1 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.profile-info .role {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.profile-info .bio {
+  color: #475569;
+  margin-bottom: 18px;
+  max-width: 640px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 32px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.detail-item .icon {
+  color: #2563eb;
+}
+
+.detail-item .label {
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  transition: background 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: #eff6ff;
+}
+
+.linkedin-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.linkedin-line .icon {
+  color: #2563eb;
+}
+
+/* three summary cards row on home page */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.summary-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+.summary-grid .card {
+  padding: 18px;
+}
+
+.entry-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.logo-badge {
+  width: 128px;
+  height: 128px;
+  border-radius: 16px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 3.4rem;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.entry-title {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+
+.entry-sub {
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.entry-meta {
+  color: #64748b;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+.cert-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.cert-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.cert-badge {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #2563eb;
+}
+
+.cert-icon-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   About page: two-column info grid + what-i-do / interests + drives strip
+   ========================================================================== */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 40px;
+  margin-bottom: 28px;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.check-list li .icon {
+  color: #2563eb;
+}
+
+.drives-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.drives-strip .drive-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.drives-strip .drive-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Experience / Education pages: list of stacked cards
+   ========================================================================== */
+.stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 150px;
+  position: relative;
+  padding-bottom: 56px;
+}
+
+.list-card .left {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+}
+
+.list-card .body {
+  flex: 1;
+}
+
+.list-card .desc {
+  color: #64748b;
+  font-size: 0.88rem;
+  margin-top: 8px;
+  max-width: 600px;
+}
+
+.expand-details {
+  display: none;
+  margin-top: 12px;
+  max-width: 600px;
+}
+
+.expand-details.show {
+  display: block;
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  margin-top: 0;
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.see-more-btn:hover {
+  text-decoration: underline;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 160px;
+  align-content: flex-start;
+}
+
+.tag {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.skills-gained-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+/* Education modules */
+.module-tags,
+.gained-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.module-tags .tag,
+.gained-tags .tag {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.gained-tags .tag {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  margin: 12px 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   Certifications page
+   ========================================================================== */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cert-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.cert-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.cert-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cert-name {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.cert-issuer {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 2px 0 6px;
+}
+
+.cert-dates {
+  color: #64748b;
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.cert-desc {
+  color: #475569;
+  font-size: 0.87rem;
+  margin-bottom: 8px;
+}
+
+.cert-card .tag-group {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   Skills page
+   ========================================================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.skills-grid .card {
+  padding: 20px;
+}
+
+.skills-grid .card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   Contact page
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 960px) {
+  .profile-section,
+  .summary-grid,
+  .two-col-grid,
+  .what-grid,
+  .drives-strip,
+  .skills-grid,
+  .contact-grid,
+  .cert-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
